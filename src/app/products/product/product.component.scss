@@ -1,0 +1,24 @@
+@import '../../../styles/constants';
+
+.product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  background-color: $mainColor;
+  border-radius: $borderRadius;
+  &__title {
+    line-height: 30px;
+    color: $textColor;
+    margin: 10px 0 10px;
+  }
+  &__image {
+    width: 100%;
+    height: 180px;
+  }
+  &__price {
+    line-height: 30px;
+    color: $textColor;
+  }
+}

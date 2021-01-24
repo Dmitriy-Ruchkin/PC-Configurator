@@ -1,0 +1,16 @@
+@import 'src/styles/constants';
+
+$headerHeight: 80px;
+
+.header {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: $headerHeight;
+  background-color: $mainColor;
+  box-shadow: $shadow;
+  color: $textColor;
+}

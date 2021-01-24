@@ -1,0 +1,9 @@
+@import 'src/styles/constants.scss';
+@import 'src/styles/buttons.scss';
+
+.parts{
+  display: flex;
+  flex-direction: column;
+  color: $textColor;
+  text-align: center;
+}

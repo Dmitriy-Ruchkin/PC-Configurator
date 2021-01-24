@@ -1,0 +1,61 @@
+@import 'src/styles/constants';
+
+$productHeight: 300px;
+$productWidth: 200px;
+
+
+.homepage {
+  height: 100%;
+  padding: $headerHeight+$grid40 $grid40 $grid40 $grid40;
+  display: grid;
+  grid-template-columns: 25% auto 25%;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-row-gap: $grid40;
+  grid-column-gap: $grid40;
+  grid-template-areas:
+"parts build support"
+"parts build support"
+"parts exsistingConfigs support"
+"parts exsistingConfigs support";
+  &__parts {
+    grid-area: parts;
+  }
+  &__parts-title {
+    margin: $grid5 0 $grid5 0;
+    color: $textColor;
+    font-size: $fontSizeLarge;
+    text-align: center;
+  }
+
+  &__products-list {
+    display: grid;
+    grid-auto-rows: $productHeight;
+    grid-row-gap: $grid40;
+    grid-column-gap: $grid40;
+    grid-template-columns: repeat(auto-fit, $productWidth);
+  }
+}
+
+.config-panel {
+  display: flex;
+  flex-direction: column;
+  grid-area: build;
+  color: $textColor;
+  text-align: center;
+}
+
+.existing-configurations {
+  display: flex;
+  flex-direction: column;
+  grid-area: exsistingConfigs;
+  color: $textColor;
+  text-align: center;
+}
+
+.support {
+  display: flex;
+  flex-direction: column;
+  grid-area: support;
+  color: $textColor;
+  text-align: center;
+}

@@ -1,0 +1,21 @@
+@import 'constants.scss';
+
+.pc-configurator__references {
+  padding: $grid10;
+  font-size: $fontSizeLarge;
+  cursor: pointer;
+  &:hover {
+    background-color: $hoverMainColor;
+    border-radius: $borderRadius;
+  }
+}
+
+.pc-configurator__submit-button {
+  font-size: $fontSizeLarge;
+  padding: $grid5;
+  cursor: pointer;
+  background-color: $confirmationColor;
+  border-radius: $borderRadius;
+  border: none;
+  color: $textColor;
+}

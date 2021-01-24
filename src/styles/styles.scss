@@ -1,0 +1,18 @@
+@import '~normalize.css';
+@import 'constants.scss';
+@import 'buttons.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: $backgroundColor;
+}
+
+a {
+  text-decoration: none;
+}
