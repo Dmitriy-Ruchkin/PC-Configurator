@@ -1,0 +1,89 @@
+@import 'src/styles/constants';
+
+$componentSize: 150px;
+
+.configurator {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-column-gap: $grid40;
+  width: 100%;
+  &__title {
+    text-align: center;
+    color: $textSecondaryColor;
+  }
+}
+
+.components-selector{
+  grid-column: 1;
+  &__components-panel {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: $componentSize;
+    grid-template-columns: repeat(auto-fill, $componentSize);
+    grid-row-gap: $grid20;
+    grid-column-gap: $grid20;
+    justify-content: center;
+  }
+  &__component {
+    width: 100%;
+    height: $componentSize;
+    background-color: $mainColor;
+    display: flex;
+    flex-direction: column;
+    border-radius: $borderRadius;
+    cursor: pointer;
+    &:hover {
+      background-color: $hoverMainColor;
+    }
+  }
+  &__component-title {
+    text-align: center;
+    color: $textMainColor;
+  }
+  &__component-image {
+    width: $componentSize;
+    height: 100px;
+    border-radius: $borderRadius $borderRadius 0 0;
+  }
+}
+
+.price-calculator {
+  padding: 0 $grid40 0 0;
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__title {
+    text-align: left;
+    color: $textMainColor;
+  }
+  &__products {
+    display: grid;
+    min-height: 9*$grid40;
+    width: 100%;
+    grid-auto-rows: $grid40;
+    grid-row-gap: $grid20;
+  }
+  &__product {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: $mainColor;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: $borderRadius;
+  }
+  &__product-title {
+    margin: 0 0 0 $grid20;
+    color: $textMainColor
+  }
+  &__product-price {
+    margin: 0 $grid20 0 0;
+    color: $textMainColor
+  }
+  &__total-price {
+    color: $textSecondaryColor
+  }
+}
+
+

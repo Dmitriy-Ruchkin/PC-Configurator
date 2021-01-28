@@ -6,27 +6,20 @@ $productWidth: 200px;
 
 .homepage {
   height: 100%;
-  padding: $headerHeight+$grid40 $grid40 $grid40 $grid40;
-  display: grid;
-  grid-template-columns: 25% auto 25%;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  grid-row-gap: $grid40;
-  grid-column-gap: $grid40;
-  grid-template-areas:
-"parts build support"
-"parts build support"
-"parts exsistingConfigs support"
-"parts exsistingConfigs support";
-  &__parts {
-    grid-area: parts;
+  padding: $headerHeight+$grid40 $grid40 $grid40 0;
+  &__work-space {
+    padding: 0 0 0 200px+$grid40;
+    display: grid;
+    grid-template-columns: auto auto 25%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row-gap: $grid40;
+    grid-column-gap: $grid40;
+    width: 100%;
   }
-  &__parts-title {
-    margin: $grid5 0 $grid5 0;
-    color: $textColor;
-    font-size: $fontSizeLarge;
-    text-align: center;
+  &__configurator {
+    grid-row: 1/5;
+    grid-column: 1/4;
   }
-
   &__products-list {
     display: grid;
     grid-auto-rows: $productHeight;
@@ -36,26 +29,48 @@ $productWidth: 200px;
   }
 }
 
+.homepage-parts {
+  position: fixed;
+  top: $headerHeight;
+  background-color: $mainColor;
+  width: 200px;
+  height: 100%;
+  &__title {
+    color: $textMainColor;
+    font-size: $fontSizeLarge;
+    text-align: center;
+  }
+  &__parts{
+    display: flex;
+    flex-direction: column;
+    color: $textMainColor;
+    text-align: left;
+  }
+}
+
 .config-panel {
   display: flex;
   flex-direction: column;
-  grid-area: build;
-  color: $textColor;
+  grid-row: 1/3;
+  grid-column: 1/3;
+  color: $textSecondaryColor;
   text-align: center;
 }
 
 .existing-configurations {
   display: flex;
   flex-direction: column;
-  grid-area: exsistingConfigs;
-  color: $textColor;
+  grid-column: 1/3;
+  grid-row: 3/5;
+  color: $textSecondaryColor;
   text-align: center;
 }
 
 .support {
   display: flex;
   flex-direction: column;
-  grid-area: support;
-  color: $textColor;
+  grid-row: 1/5;
+  grid-column: 3/4;
+  color: $textSecondaryColor;
   text-align: center;
 }

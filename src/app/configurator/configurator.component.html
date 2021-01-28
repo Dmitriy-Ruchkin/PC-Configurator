@@ -1,0 +1,27 @@
+<div class="configurator">
+  <ng-container *ngIf="!componentsListViewModel; else componentsListTemplate">
+    <div class="components-selector">
+    <h3 class="configurator__title">Выберите комплектующие для вашего ПК</h3>
+      <div class="components-selector__components-panel">
+        <div class="components-selector__component" *ngFor="let product of remainedProductsCategories"
+             (click)="openComponentsListWithSelectedCategory(product)">
+          <img [src]="imagesUrls[product]" class="components-selector__component-image">
+          <p class="components-selector__component-title">{{ProductsTypes[product]}}</p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+  <ng-template #componentsListTemplate>
+    <app-products [productType]="selectedProductType"></app-products>
+  </ng-template>
+  <div class="price-calculator">
+    <h3 class="configurator__title">Список выбранных комплектующих</h3>
+    <div class="price-calculator__products">
+      <div class="price-calculator__product" *ngFor="let product of selectedProducts | async">
+        <p class="price-calculator__product-title">{{product.name}}</p>
+        <p class="price-calculator__product-price">Цена: {{product.price}}</p>
+      </div>
+    </div>
+    <p class="price-calculator__total-price">Стоимость конфигурации: {{totalPrice}} Денег</p>
+  </div>
+</div>

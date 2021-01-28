@@ -4,13 +4,12 @@ $headerHeight: 80px;
 
 .header {
   position: fixed;
+  border-bottom: solid 2px black;
   top: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 0 0 0 $grid40;
   width: 100%;
   height: $headerHeight;
   background-color: $mainColor;
   box-shadow: $shadow;
-  color: $textColor;
+  color: $textMainColor;
 }

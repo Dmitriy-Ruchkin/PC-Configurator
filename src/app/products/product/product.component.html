@@ -1,5 +1,8 @@
 <div class="product">
-<h3 class="product__title">{{product.title}}</h3>
-  <img class="product__image" [src]="product.image">
-  <p class="product__price">{{product.price}}</p>
+<h3 class="product__title">{{data.name}}</h3>
+  <img class="product__image" [src]="data.imageUrl">
+  <p class="product__description" *ngFor="let paragraph of productDescription">{{paragraph}}</p>
+  <p class="product__price">{{data.price | pcConfiguratorCurrencyPipe}}</p>
+  <button type="button" (click)="selectThisProduct()" class="pc-configurator__accept-button-primary">Добавить в конфигурацию</button>
+  <button type="button" (click)="hide()">Закрыть</button>
 </div>
