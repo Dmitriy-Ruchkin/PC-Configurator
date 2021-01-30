@@ -2,8 +2,8 @@ import { Component, OnDestroy } from '@angular/core';
 import { IProduct, ProductsTypes } from '../products/products.types';
 import { ConfiguratorTypesImages } from './configurator.types';
 import { ProductsService } from '../products/products.service';
-import {Icon, IIconSize} from '../shared/icons/icons.component';
-import {globalConstants} from '../core/constants';
+import { Icon, IIconSize } from '../shared/icons/icons.component';
+import { globalConstants } from '../core/constants';
 
 @Component({
   selector: 'app-configurator',
