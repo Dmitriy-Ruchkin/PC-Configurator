@@ -36,6 +36,13 @@ export class ProductsService {
     return this.http.get<IProduct[]>(url).toPromise()
   }
 
+  public removeSelectedProductFromConfiguration(component: IProduct): void {
+    const data = this.userSelectedProductsSubject.value.filter((product) => product.id !== component.id)
+    this.userSelectedProductsSubject.next(data)
+    const storage = this.remainedProductsCategories.value.concat(component.type)
+    this.remainedProductsCategories.next(storage)
+  }
+
   private removeSelectedCategory(): void {
     const data = this.productTypesNames.filter(category => !this.userSelectedProductsSubject.value
       .map(product => product.type).includes(category))

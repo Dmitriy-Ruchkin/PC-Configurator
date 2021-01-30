@@ -20,6 +20,8 @@
       <div class="price-calculator__product" *ngFor="let product of selectedProducts | async">
         <p class="price-calculator__product-title">{{product.name}}</p>
         <p class="price-calculator__product-price">Цена: {{product.price}}</p>
+        <app-icons [icon]="icon.CloseIcon" [iconSize]="closeIcon" class="product__close-icon"
+                   (click)="removeSelectedProduct(product)"></app-icons>
       </div>
     </div>
     <p class="price-calculator__total-price">Стоимость конфигурации: {{totalPrice | pcConfiguratorCurrencyPipe}}</p>

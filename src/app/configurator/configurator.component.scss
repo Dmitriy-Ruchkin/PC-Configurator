@@ -74,15 +74,21 @@ $componentSize: 150px;
     border-radius: $borderRadius;
   }
   &__product-title {
-    margin: 0 0 0 $grid20;
+    margin: 0 0 0 20px;
+    max-width: 60%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     color: $textMainColor
   }
   &__product-price {
-    margin: 0 $grid20 0 0;
+    margin: 0 $grid20 0 auto;
     color: $textMainColor
   }
   &__total-price {
     color: $textSecondaryColor
+  }
+  &__close-icon {
   }
 }
 
