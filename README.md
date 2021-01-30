@@ -1,5 +1,6 @@
-# MyProject
+# PC-configurator
 
+This app allow users to create their own pc-configuration, with calculatem components capability and total price. It still in development state.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0.
 
 ## Development server
