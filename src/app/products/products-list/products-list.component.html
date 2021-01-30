@@ -2,7 +2,7 @@
   <h3 class="products__title">{{Products[productType]}}</h3>
   <div class="products__products-list">
     <div class="products__product" *ngFor="let product of productsList" (click)="openProductDescription(product)">
-      <img [src]="product.imageUrl" class="products__product-image">
+      <img [src]="product.imageURL" class="products__product-image">
         <p class="products__product-title">{{product.name}}</p>
         <p class="products__product-description">{{product.description}}</p>
       <p class="products__product-price">Цена: {{product.price | pcConfiguratorCurrencyPipe}}</p>

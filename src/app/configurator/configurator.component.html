@@ -22,6 +22,6 @@
         <p class="price-calculator__product-price">Цена: {{product.price}}</p>
       </div>
     </div>
-    <p class="price-calculator__total-price">Стоимость конфигурации: {{totalPrice}} Денег</p>
+    <p class="price-calculator__total-price">Стоимость конфигурации: {{totalPrice | pcConfiguratorCurrencyPipe}}</p>
   </div>
 </div>

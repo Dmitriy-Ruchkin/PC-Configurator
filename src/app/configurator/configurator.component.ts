@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {IProduct, ProductsTypes} from '../products/products.types';
+import { IProduct, ProductsTypes } from '../products/products.types';
 import { ConfiguratorTypesImages } from './configurator.types';
 import { ProductsService } from '../products/products.service';
 

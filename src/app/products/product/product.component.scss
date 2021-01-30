@@ -1,16 +1,20 @@
 @import '../../../styles/constants';
 
+$productDialogWidth: 500px;
+$titleLineHeight: 30px;
+$titleMargin: 10px 0 10px;
+
 .product{
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
+  width: $productDialogWidth;
   height: 100vh;
   background-color: $mainColor;
   &__title {
-    line-height: 30px;
+    line-height: $titleLineHeight;
     color: $textMainColor;
-    margin: 10px 0 10px;
+    margin: $titleMargin;
   }
   &__image {
     width: 100%;

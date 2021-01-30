@@ -21,11 +21,7 @@ export class ProductsListComponent implements OnInit {
   constructor(private productsService: ProductsService, private dialogsService: DialogsService) { }
 
  async ngOnInit(): Promise<void> {
-    this.productsList = await this.getParts(this.productType)
-  }
-
-  public async getParts(type: string): Promise<IProduct[]> {
-   return await this.productsService.getProducts(type)
+    this.productsList = await this.productsService.getProductsByType(this.productType)
   }
 
   public openProductDescription(product: IProduct): void {

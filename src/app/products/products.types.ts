@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-shadow
 export enum ProductsTypes {
   Case = 'Корпус',
-  Processors = 'Процессор',
+  CPU = 'Процессор',
   MainBoard = 'Материнская плата',
   VideoCard = 'Видеокарта',
   SystemMemory = 'Оперативная память',
@@ -18,12 +18,13 @@ export interface IProduct {
   id: string
   name: string
   price: number
-  imageUrl: string
+  imageURL: string
   description: string
 }
 
 export interface IVideoCard {
   name: string
+  length: number,
   memoryCapacity: string
   price: number
 }
@@ -32,4 +33,5 @@ export interface ICase {
   name: string
   size: string
   price: number
+  videoCardMaxLength: number;
 }

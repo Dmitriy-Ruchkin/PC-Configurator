@@ -1,6 +1,10 @@
 @import '../../../styles/constants';
 @import '../../../styles/buttons';
 
+$productHeight: 160px;
+$productDescriptionFieldHeight: 80px;
+$productImageWidth: 160px;
+
 .products {
   &__title {
     color: $textSecondaryColor;
@@ -9,7 +13,7 @@
   }
   &__products-list {
     display: grid;
-    grid-auto-rows: 160px;
+    grid-auto-rows: $productHeight;
     grid-row-gap: $grid20;
   }
   &__product {
@@ -17,7 +21,7 @@
     border-radius: $borderRadius;
     display: grid;
     grid-template-columns: max-content auto max-content;
-    grid-template-rows: $grid40 80px $grid40;
+    grid-template-rows: $grid40 $productDescriptionFieldHeight $grid40;
     &:hover {
       background-color: $hoverMainColor;
     }
@@ -25,7 +29,7 @@
   &__product-image {
     border-radius: $borderRadius 0 0 0;
     margin: 0 $grid20 0 0;
-    width: 160px;
+    width: $productImageWidth;
     height: auto;
     grid-column: 1;
     grid-row: 1/3;

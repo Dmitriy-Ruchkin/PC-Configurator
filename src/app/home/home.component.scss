@@ -2,13 +2,14 @@
 
 $productHeight: 300px;
 $productWidth: 200px;
+$partsPanelWidth: 200px;
 
 
 .homepage {
   height: 100%;
   padding: $headerHeight+$grid40 $grid40 $grid40 0;
   &__work-space {
-    padding: 0 0 0 200px+$grid40;
+    padding: 0 0 0 $partsPanelWidth+$grid40;
     display: grid;
     grid-template-columns: auto auto 25%;
     grid-template-rows: 1fr 1fr 1fr 1fr;
