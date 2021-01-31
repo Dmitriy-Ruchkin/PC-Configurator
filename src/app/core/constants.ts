@@ -1,8 +1,8 @@
 export const globalConstants = {
   iconSizes: {
     closeIconSize: {
-      width: 24,
-      height: 24
+      width: 18,
+      height: 18
     }
   }
 }

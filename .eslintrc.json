@@ -61,6 +61,10 @@
             }
           }
         ],
+        "@typescript-eslint/no-shadow": [
+          "error"
+        ],
+        "no-shadow": "off",
         "object-curly-spacing": ["error", "always"],
         "no-trailing-spaces": "off"
       }

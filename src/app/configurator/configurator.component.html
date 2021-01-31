@@ -1,7 +1,7 @@
-<div class="configurator">
-  <ng-container *ngIf="!componentsListViewModel; else componentsListTemplate">
+<div class="configurator" [ngSwitch]="currentState$ | async">
+  <ng-container *ngSwitchCase="configuratorStates.componentSelectorInitialView">
     <div class="components-selector">
-    <h3 class="configurator__title">Выберите комплектующие для вашего ПК</h3>
+      <h3 class="configurator__title">{{ currentState$ | async }}</h3>
       <div class="components-selector__components-panel">
         <div class="components-selector__component" *ngFor="let product of remainedProductsCategories"
              (click)="openComponentsListWithSelectedCategory(product)">
@@ -11,13 +11,21 @@
       </div>
     </div>
   </ng-container>
-  <ng-template #componentsListTemplate>
+  <ng-container *ngSwitchCase="configuratorStates.componentSelectionInProgress">
     <app-products [productType]="selectedProductType"></app-products>
-  </ng-template>
+  </ng-container>
+  <ng-container *ngSwitchCase="configuratorStates.componentSelectionFinished">
+    <h3 class="configurator__title">{{ currentState$ | async }}</h3>
+    <div class="completed-configuration">
+      <h2 class="completed-configuration__title">Хотите сохранить кофигурацию?</h2>
+      <button class="pc-configurator__accept-button-primary completed-configuration__accept-button" type="button">Сохранить конфигурацию</button>
+      <button class="pc-configurator__decline-button-primary completed-configuration__decline-button" type="button">Не сохранять</button>
+    </div>
+  </ng-container>
   <div class="price-calculator">
     <h3 class="configurator__title">Список выбранных комплектующих</h3>
     <div class="price-calculator__products">
-      <div class="price-calculator__product" *ngFor="let product of selectedProducts | async">
+      <div class="price-calculator__product" *ngFor="let product of selectedProducts | async" (click)="showProductDetails(product)">
         <p class="price-calculator__product-title">{{product.name}}</p>
         <p class="price-calculator__product-price">Цена: {{product.price}}</p>
         <app-icons [icon]="icon.CloseIcon" [iconSize]="closeIcon" class="product__close-icon"

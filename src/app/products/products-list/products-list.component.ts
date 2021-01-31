@@ -24,8 +24,9 @@ export class ProductsListComponent implements OnInit {
     this.productsList = await this.productsService.getProductsByType(this.productType)
   }
 
-  public openProductDescription(product: IProduct): void {
-    void this.dialogsService.show<ProductComponent>(ProductComponent.generateId(), ProductComponent, product, {
+  public showProductDetails(product: IProduct): void {
+    void this.dialogsService.show<ProductComponent>(ProductComponent.generateId(), ProductComponent,
+      { product, showAddToConfigButton: true }, {
       position: DialogPosition.Right,
       closeOnClickOutside: false,
     })

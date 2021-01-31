@@ -26,6 +26,12 @@ export class ProductsService {
     this.removeSelectedCategory()
   }
 
+  public removeSelectedProductFromUserConfig(product: IProduct): void {
+    const data = this.userSelectedProductsSubject.value
+    data.filter(components => components.id !== product.id)
+    this.userSelectedProductsSubject.next(data)
+  }
+
   public getProducts(): Promise<IProduct[]> {
     const url = `${environment.serverUri}/components`
     return this.http.get<IProduct[]>(url).toPromise()

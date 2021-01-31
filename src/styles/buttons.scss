@@ -19,3 +19,8 @@
   border: none;
   color: $textMainColor;
 }
+
+.pc-configurator__decline-button-primary {
+  @extend .pc-configurator__accept-button-primary;
+  background-color: $rejectionColor;
+}

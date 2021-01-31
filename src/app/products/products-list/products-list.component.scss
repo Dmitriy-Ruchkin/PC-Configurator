@@ -20,14 +20,14 @@ $productImageWidth: 160px;
     background-color: $mainColor;
     border-radius: $borderRadius;
     display: grid;
-    grid-template-columns: max-content auto max-content;
+    grid-template-columns: max-content auto min-content;
     grid-template-rows: $grid40 $productDescriptionFieldHeight $grid40;
     &:hover {
       background-color: $hoverMainColor;
     }
   }
   &__product-image {
-    border-radius: $borderRadius 0 0 0;
+    border-radius: $borderRadius 0 0 $borderRadius;
     margin: 0 $grid20 0 0;
     width: $productImageWidth;
     height: auto;

@@ -11,5 +11,9 @@ $headerHeight: 80px;
   height: $headerHeight;
   background-color: $mainColor;
   box-shadow: $shadow;
-  color: $textMainColor;
+  &__title {
+    text-decoration: none;
+    color: $textMainColor;
+    outline: none;
+  }
 }

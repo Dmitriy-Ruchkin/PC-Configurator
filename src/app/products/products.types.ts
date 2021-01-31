@@ -1,5 +1,3 @@
-
-// eslint-disable-next-line no-shadow
 export enum ProductsTypes {
   Case = 'Корпус',
   CPU = 'Процессор',
