@@ -1,0 +1,18 @@
+@import '../../../styles/constants';
+
+.pc-configurator-input {
+  &__input {
+    background-color: $backgroundColor;
+    color: $textSecondaryColor;
+    border-radius: $borderRadius;
+    width: 100%;
+  }
+  &__label {
+    margin: 0;
+    color: $textMainColor;
+  }
+  &__errors {
+    color: red;
+    margin: 0;
+  }
+}

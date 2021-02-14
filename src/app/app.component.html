@@ -1,5 +1,14 @@
 <div class="header">
   <h1 class="header__title" routerLink="/">PC configurator</h1>
+  <div class="header__authentication-block">
+    <ng-container *ngIf="isAuthenticate; else unAuthenticatedUser">
+      <p class="header__sing-in-button pc-configurator__references" (click)="openSignIn()">Войти</p>
+      <p class="header__sing-up-button pc-configurator__references" (click)="openSignUp()">Зарегистрироваться</p>
+    </ng-container>
+    <ng-template #unAuthenticatedUser>
+      <p class="header__sing-out-button pc-configurator__references" (click)="signOut()">Выйти</p>
+    </ng-template>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

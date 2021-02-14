@@ -6,7 +6,9 @@ $headerHeight: 80px;
   position: fixed;
   border-bottom: solid 2px black;
   top: 0px;
-  padding: 0 0 0 $grid40;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $grid40 0 $grid40;
   width: 100%;
   height: $headerHeight;
   background-color: $mainColor;
@@ -15,5 +17,9 @@ $headerHeight: 80px;
     text-decoration: none;
     color: $textMainColor;
     outline: none;
+  }
+  &__authentication-block {
+    display: flex;
+    align-items: center;
   }
 }

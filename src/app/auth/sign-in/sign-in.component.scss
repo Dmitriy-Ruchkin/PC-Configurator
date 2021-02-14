@@ -1,0 +1,14 @@
+@import '../../../styles/constants';
+
+$productDialogWidth: 500px;
+$titleLineHeight: 30px;
+
+.sign-in {
+  display: flex;
+  padding: $grid40;
+  flex-direction: column;
+  align-items: center;
+  width: $productDialogWidth;
+  height: 100vh;
+  background-color: $mainColor;
+}

@@ -10,7 +10,11 @@ import { ProductComponent } from './products/product/product.component';
 import { ProductsListComponent } from './products/products-list/products-list.component';
 import { IconsComponent } from './shared/icons/icons.component';
 import { ConfiguratorComponent } from './configurator/configurator.component';
-import { pcConfiguratorCurrencyPipe } from  './shared/pipes'
+import { pcConfiguratorCurrencyPipe } from  './shared/pipes';
+import { SignInComponent } from './auth/sign-in/sign-in.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PcConfigFormControlComponent } from './forms/pc-config-form-control/pc-config-form-control.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,12 @@ import { pcConfiguratorCurrencyPipe } from  './shared/pipes'
     ProductsListComponent,
     IconsComponent,
     ConfiguratorComponent,
-    pcConfiguratorCurrencyPipe
+    pcConfiguratorCurrencyPipe,
+    SignInComponent,
+    SignUpComponent,
+    PcConfigFormControlComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, DialogsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, DialogsModule, ReactiveFormsModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent]
 })
