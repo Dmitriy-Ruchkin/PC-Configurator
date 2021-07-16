@@ -78,5 +78,4 @@ export class ConfiguratorComponent implements OnDestroy {
       this.totalPrice = 0
   }
 
-
 }
