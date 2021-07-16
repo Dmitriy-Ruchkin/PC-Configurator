@@ -1,0 +1,14 @@
+<div class="product">
+  <app-icons [icon]="icon.CloseIcon" [iconSize]="closeIcon" class="product__close-icon"
+             (click)="hide()"></app-icons>
+<h3 class="product__title">{{data.product.name}}</h3>
+  <img class="product__image" [src]="data.product.imageURL">
+  <div class="product__description">
+    <p class="product__description-paragraph" *ngFor="let paragraph of productDescription">{{paragraph}}</p>
+  </div>
+  <p class="product__price">{{data.product.price | pcConfiguratorCurrencyPipe}}</p>
+  <button *ngIf="data.showAddToConfigButton" type="button" (click)="selectProduct()"
+          class="pc-configurator__accept-button-primary">Добавить в конфигурацию</button>
+  <button *ngIf="!data.showAddToConfigButton" type="button" (click)="removeProduct()"
+          class="pc-configurator__decline-button-primary">Убрать из конфигурации</button>
+</div>

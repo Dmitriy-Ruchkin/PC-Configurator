@@ -1,0 +1,39 @@
+<div class="homepage">
+  <div [ngSwitch]="currentState$ | async" class="homepage__work-space">
+    <ng-container *ngSwitchCase="HomePageStateTypes.initialView">
+      <div class="config-panel">
+        <button type="button" class="config-panel__select-config pc-configurator__accept-button-primary"
+                (click)="changeState(HomePageStateTypes.configurationInProgress)"
+        >Приступить к сборке</button>
+        <h3 class="config-panel__description">На данном ресурсе вы можете собственноручно собрать   подходящую вам
+          конфигурацию персонального компьютера и ознакомиться с расценками на комплектующие.<br>
+          Также вы можете заказать сборку у наших специальстов по заданным вами параметрам.</h3>
+      </div>
+      <div class="existing-configurations">
+        <h3 class="existing-configurations__title">
+          Готовые сборки
+        </h3>
+      </div>
+      <div class="support">
+        <button class="config-panel__select-config pc-configurator__accept-button-primary">Заказать сборку</button>
+        <h3 class="support__title">
+          Подборка комплектующим нашими специалистами по заданным вами параметрам, таким как :<br>
+          цена, режим использования(игровой, домашний, графика итд.).<br>
+          Профессиональная сборка и доставка.
+        </h3>
+      </div>
+    </ng-container>
+    <ng-container *ngSwitchCase="HomePageStateTypes.configurationInProgress">
+      <app-configurator class="homepage__configurator"></app-configurator>
+    </ng-container>
+  </div>
+  <div class="homepage-parts">
+    <h3 class="homepage-parts__title">
+      Комплектующие:
+    </h3>
+    <div class="homepage-parts__parts">
+      <a class="pc-configurator__references" *ngFor="let part of partsNames">{{part}}</a>
+    </div>
+  </div>
+</div>
+

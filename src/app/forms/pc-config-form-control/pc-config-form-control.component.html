@@ -1,0 +1,5 @@
+<div class="pc-configurator-input">
+  <p class="pc-configurator-input__label" >{{label}}</p>
+  <input type="type" class="pc-configurator-input__input" [formControl]="formControl" (blur)="blur()">
+  <span *ngFor="let error of errors">{{error}}</span>
+</div>

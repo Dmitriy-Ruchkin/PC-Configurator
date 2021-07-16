@@ -1,0 +1,26 @@
+@import 'constants.scss';
+
+.pc-configurator__references {
+  padding: $grid10;
+  font-size: $fontSizeBase;
+  cursor: pointer;
+  &:hover {
+    background-color: $backgroundColor;
+    color: $textSecondaryColor;
+  }
+}
+
+.pc-configurator__accept-button-primary {
+  font-size: $fontSizeLarge;
+  padding: $grid5;
+  cursor: pointer;
+  background-color: $confirmationColor;
+  border-radius: $borderRadius;
+  border: none;
+  color: $textMainColor;
+}
+
+.pc-configurator__decline-button-primary {
+  @extend .pc-configurator__accept-button-primary;
+  background-color: $rejectionColor;
+}

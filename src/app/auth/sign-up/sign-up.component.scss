@@ -1,0 +1,23 @@
+@import '../../../styles/constants';
+
+$productDialogWidth: 400px;
+$titleLineHeight: 30px;
+
+.sign-up-dialog {
+  display: flex;
+  padding: $grid40;
+  flex-direction: column;
+  align-items: center;
+  width: $productDialogWidth;
+  height: 100vh;
+  background-color: $mainColor;
+  &__title {
+    line-height: $titleLineHeight;
+  }
+  &__form {
+    display: grid;
+    width:100%;
+    grid-auto-rows: $grid40;
+    grid-row-gap: $grid20;
+  }
+}

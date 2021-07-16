@@ -1,0 +1,46 @@
+@import '../../../styles/constants';
+
+$productDialogWidth: 500px;
+$titleLineHeight: 30px;
+
+.product{
+  display: flex;
+  padding: $grid40;
+  flex-direction: column;
+  align-items: center;
+  width: $productDialogWidth;
+  height: 100vh;
+  background-color: $mainColor;
+  &__close-icon {
+    position: absolute;
+    top: $grid20;
+    right: $grid20;
+    cursor: pointer;
+  }
+  &__title {
+    line-height: $titleLineHeight;
+    color: $textMainColor;
+  }
+  &__description {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  &__description-paragraph {
+
+  }
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+  &__price {
+    padding: $grid20;
+    text-align: center;
+    width: $productDialogWidth;
+    background-color: $backgroundColor;
+    font-size: $fontSizeLarge;
+    color: $textSecondaryColor;
+  }
+}

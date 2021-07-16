@@ -1,0 +1,25 @@
+@import 'src/styles/constants';
+
+$headerHeight: 80px;
+
+.header {
+  position: fixed;
+  border-bottom: solid 2px black;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 $grid40 0 $grid40;
+  width: 100%;
+  height: $headerHeight;
+  background-color: $mainColor;
+  box-shadow: $shadow;
+  &__title {
+    text-decoration: none;
+    color: $textMainColor;
+    outline: none;
+  }
+  &__authentication-block {
+    display: flex;
+    align-items: center;
+  }
+}

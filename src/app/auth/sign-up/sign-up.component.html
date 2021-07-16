@@ -1,0 +1,14 @@
+<div class="sign-up-dialog">
+  <h3 class="sign-up-dialog__title">Регистрация</h3>
+  <form [formGroup]="form" class="sign-up-dialog__form" (ngSubmit)="submitUserData()">
+    <app-pc-config-form-control type="text" class="sign-up-dialog__form-control"
+                                label="{{formControlName.Name}}" [formControlName]="formControlName.Name"></app-pc-config-form-control>
+    <app-pc-config-form-control type="email" class="sign-up-dialog__form-control"
+                                label="{{formControlName.Email}}"  [formControlName]="formControlName.Email"></app-pc-config-form-control>
+    <app-pc-config-form-control type="text" class="sign-up-dialog__form-control"
+                                label="{{formControlName.Password}}"  [formControlName]="formControlName.Password"></app-pc-config-form-control>
+    <app-pc-config-form-control type="text" class="sign-up-dialog__form-control"
+                                label="{{formControlName.RepeatPassword}}"  [formControlName]="formControlName.RepeatPassword"></app-pc-config-form-control>
+    <button type="submit">Подтвердить</button>
+  </form>
+</div>
